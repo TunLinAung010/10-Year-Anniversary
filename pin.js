@@ -7,7 +7,7 @@ document.getElementById("submit-pin").addEventListener("click", () => {
 
   if (entered === correctPin) {
     // PIN correct → redirect to main.html
-    window.location.href = "main.html";  
+    window.location.href = "tunandhninforeverlove.html";  
   } else {
     // PIN incorrect → show error message
     document.getElementById("error-msg").textContent = "Incorrect PIN!";
