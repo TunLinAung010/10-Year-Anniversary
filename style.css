@@ -1,5 +1,5 @@
-/* Import Poppins for extra boldness */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+/* Import Poppins and a beautiful Script font for the headings */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Great+Vibes&display=swap');
 
 body {
   margin: 0;
@@ -19,11 +19,20 @@ header {
   border-radius: 0 0 30px 30px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #B8860B; /* Exact Gold */
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+/* --- BEAUTIFUL GOLD TITLE --- */
+header h1, h2.gold-text {
+  font-family: 'Great Vibes', cursive; /* Elegant Script */
+  font-size: 4rem;
+  font-weight: 400; /* Script fonts look better at normal weight */
+  margin: 0;
+  
+  /* Metallic Gold Gradient */
+  background: linear-gradient(to bottom, #cfaf61 0%, #ffeead 25%, #b49239 50%, #cfaf61 75%, #8a6d3b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* 3D Depth */
+  filter: drop-shadow(2px 3px 4px rgba(0, 0, 0, 0.2));
 }
 
 .message {
@@ -39,12 +48,12 @@ header h1 {
 .message p {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #B8860B; /* Deep Gold color */
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #8a6d3b; /* Deep Gold color */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
   margin: 0;
 }
 
-/* 💖 IMPROVED FLOATING HEARTS - Full Screen Coverage */
+/* 💖 FLOATING HEARTS - Full Screen Coverage */
 .hearts-container {
   position: fixed;
   top: 0;
@@ -63,7 +72,6 @@ header h1 {
   opacity: 0;
 }
 
-/* Distributed positions across the full width */
 .heart-unit:nth-child(1) { left: 5%;  animation-delay: 0s;   font-size: 20px; }
 .heart-unit:nth-child(2) { left: 15%; animation-delay: 2s;   font-size: 35px; }
 .heart-unit:nth-child(3) { left: 25%; animation-delay: 4s;   font-size: 22px; }
@@ -91,9 +99,11 @@ header h1 {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
+/* --- TIMELINE GOLD --- */
 .timeline h2 { 
-  color: #B8860B; 
-  font-weight: 800; 
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #b49239; 
   margin-top: 40px;
 }
 
@@ -105,15 +115,16 @@ header h1 {
 .timeline li {
   margin: 15px auto;
   max-width: 500px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   padding: 15px 25px;
   border-radius: 50px;
   font-weight: 700;
-  color: #B8860B; /* Applied gold to every year */
-  border: 1px solid rgba(255,255,255,0.2);
+  color: #8a6d3b; /* Deepened the gold for readability */
+  border: 1px solid rgba(212, 175, 55, 0.3);
   transition: transform 0.3s ease;
 }
 
 .timeline li:hover {
   transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
 }
