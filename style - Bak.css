@@ -1,0 +1,119 @@
+/* Import Poppins for extra boldness */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Pyidaungsu', sans-serif; 
+  text-align: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffc3a0);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  line-height: 2.2;
+}
+
+header {
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 30px 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #B8860B; /* Exact Gold */
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.message {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.message p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #B8860B; /* Deep Gold color */
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+/* 💖 IMPROVED FLOATING HEARTS - Full Screen Coverage */
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1; 
+}
+
+.heart-unit {
+  position: absolute;
+  bottom: -10%;
+  font-size: 25px;
+  animation: floatDance 8s linear infinite;
+  opacity: 0;
+}
+
+/* Distributed positions across the full width */
+.heart-unit:nth-child(1) { left: 5%;  animation-delay: 0s;   font-size: 20px; }
+.heart-unit:nth-child(2) { left: 15%; animation-delay: 2s;   font-size: 35px; }
+.heart-unit:nth-child(3) { left: 25%; animation-delay: 4s;   font-size: 22px; }
+.heart-unit:nth-child(4) { left: 35%; animation-delay: 1s;   font-size: 30px; }
+.heart-unit:nth-child(5) { left: 50%; animation-delay: 3s;   font-size: 18px; }
+.heart-unit:nth-child(6) { left: 65%; animation-delay: 5s;   font-size: 25px; }
+.heart-unit:nth-child(7) { left: 80%; animation-delay: 6.5s; font-size: 40px; }
+.heart-unit:nth-child(8) { left: 90%; animation-delay: 0.5s; font-size: 15px; }
+.heart-unit:nth-child(9) { left: 45%; animation-delay: 7s;   font-size: 28px; }
+.heart-unit:nth-child(10){ left: 75%; animation-delay: 2.5s; font-size: 32px; }
+
+@keyframes floatDance {
+  0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.8; }
+  30% { transform: translateY(-30vh) translateX(60px) rotate(45deg); }
+  60% { transform: translateY(-60vh) translateX(-60px) rotate(-45deg); }
+  100% { transform: translateY(-110vh) translateX(30px) rotate(360deg); opacity: 0; }
+}
+
+.slideshow img {
+  width: 85%;
+  max-width: 450px;
+  border-radius: 25px;
+  border: 6px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.timeline h2 { 
+  color: #B8860B; 
+  font-weight: 800; 
+  margin-top: 40px;
+}
+
+.timeline ul {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin: 15px auto;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #B8860B; /* Applied gold to every year */
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+
+.timeline li:hover {
+  transform: scale(1.05);
+}
