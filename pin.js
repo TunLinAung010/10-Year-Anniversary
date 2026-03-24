@@ -1,5 +1,5 @@
 // Set your default PIN
-const correctPin = "112016";  
+const correctPin = "251019";  
 
 // Wait for button click
 document.getElementById("submit-pin").addEventListener("click", () => {
